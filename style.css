@@ -1,0 +1,136 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+header {
+    background: url(./images/header_back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.5);
+}
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+.logo {
+    height: 100%;
+}
+a {
+    color:#fff;
+    text-decoration: none;
+}
+.menu {
+    display: flex;
+    list-style: none;
+}
+.menu li {
+    padding: 10px 40px;
+}
+.menu li:hover a {
+    transition: 0.8s;
+    color: #c49300;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.banner h1 {
+    font-size: 72px;
+    margin: 10px;
+}
+.banner p {
+    width: 50%;
+    text-align: center;
+}
+.btn {
+    background-color: #c49300;
+    padding: 15px 50px;
+    transition: 0.9s;
+}
+.btn:hover {
+    background: #8c6900;
+}
+.clothes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15vh;
+    padding: 150px 10px 100px 10px;
+    justify-content: space-around;
+}
+.clothes p {
+    width: 50%;
+    text-align: center;
+}
+.items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.item {
+    overflow: hidden;
+    position: relative;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.item:hover img {
+    transform: scale(1.2);
+}
+.overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay p {
+    text-align: center;
+    color: #fff;
+}
+footer {
+    color: #fff;
+    margin-top: 30px;
+    background-color: #000;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+footer h3, footer p {
+    margin: 0;
+}
+.social_contacts {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+}
+.social_contacts a:hover {
+    color: orange;
+    transition: 0.8s;
+}
+
