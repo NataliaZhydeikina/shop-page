@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body, html{
     padding: 0;
     margin: 0;
@@ -19,7 +22,13 @@ header {
     background-position: center;
     background-size: cover;
 }
-.shop .banner {
+.about header {
+    background: url(./images/about_header_back.jpg);
+    min-height: auto;
+    background-position: center;
+    background-size: cover;
+}
+.about .banner, .shop .banner {
     min-height: 255px;
 }
 nav {
@@ -47,6 +56,32 @@ a {
     transition: 0.8s;
     color: #c49300;
 }
+.menu_icon_item {
+    color: #fff;
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .menu {
+        display: none;
+        position: absolute;
+        right: 50px;
+        top: 60px;
+        background: #00000054;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    .menu_icon_item {
+        display: block;
+    }
+    .menu:hover,
+    .menu_icon_item:hover ~ .menu {
+        display: block;
+    }
+    .menu li:hover {
+        background: #00000054;
+    }
+}
 .banner {
     display: flex;
     flex-direction: column;
@@ -71,7 +106,7 @@ a {
 .btn:hover {
     background: #8c6900;
 }
-.clothes {
+.info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,14 +114,14 @@ a {
     padding: 150px 10px 100px 10px;
     justify-content: space-around;
 }
-.clothes p {
+.info p {
     width: 50%;
     text-align: center;
 }
-.shop .clothes {
+.shop .info {
     padding: 75px 10px 100px 10px;
 }
-.shop .clothes p {
+.shop .info p {
     width: 70%;
 }
 .items {
@@ -182,4 +217,53 @@ footer h3, footer p {
 }
 .card button:hover {
     background-color: orange;
+}
+.description {
+    max-width: 1100px;
+    width: 100%;
+    margin: 70px auto 0px auto;
+    padding: 0 120px 0 70px;
+}
+.description hr {
+    background: #000;
+    height: 3px;
+    min-width: 200px;
+    width: 20%;
+    margin-left: 0;
+}
+.description-text {
+    font-size: 20px;
+}
+.items_team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 100px auto;
+    width: 100%;
+    justify-content: center;
+}
+.item_team {
+    min-width: 200px;
+}
+@media screen and (max-width: 900px) {
+    .items_team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    .items_team {
+        grid-template-columns: 1fr;
+    }
+}
+.item_team_img {
+    width: 100%;
+}
+.item_name {
+    font-size: 24px;
+}
+.item_position {
+    font-size: 18px;
+    color: #888;
 }
