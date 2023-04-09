@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    word-break: break-all;
 }
 body, html{
     padding: 0;
@@ -28,7 +29,13 @@ header {
     background-position: center;
     background-size: cover;
 }
-.about .banner, .shop .banner {
+.contacts header {
+    background: url(./images/contacts_header_back.jpg);
+    min-height: auto;
+    background-position: center;
+    background-size: cover;
+}
+.about .banner, .shop .banner, .contacts .banner {
     min-height: 255px;
 }
 nav {
@@ -123,6 +130,11 @@ a {
 }
 .shop .info p {
     width: 70%;
+}
+@media screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
 }
 .items {
     display: grid;
@@ -266,4 +278,62 @@ footer h3, footer p {
 .item_position {
     font-size: 18px;
     color: #888;
+}
+.contact-info, .request {
+    width: 100%;
+    max-width: 1030px;
+    margin: 100px auto;
+    padding: 0 15px;
+}
+.contact-info {
+    margin: 150px auto;
+}
+@media screen and (max-width: 768px) {
+    .contact-info, .request {
+        margin: 50px auto;
+    }
+}
+
+.contact-info h2 {
+    font-size: 24px;
+}
+.request input {
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #000;
+    padding: 20px 5px;
+    margin: 30px 0;
+    font-size: 18px;
+}
+.request input:focus {
+    outline: none;
+}
+.request button {
+    border: none;
+    background: #000;
+    border-radius: 50px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px 5px;
+    font-size: 18px;
+}
+iframe {
+    width: 100%;
+}
+.map h4, .map p {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1030px;
+    margin: 20px auto;
+    font-size: 24px;
+}
+.contacts footer {
+    margin-top: 0;
+}
+footer {
+    padding: 20px;
 }
